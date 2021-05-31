@@ -27,6 +27,16 @@ class Cridential:
         
         Cridential.password_list.remove(self)
 
+    @classmethod
+    def find_by_account(cls, account):
+        '''
+        Method that takes in a number and returns a contact that matches that number.
+        '''
+        for password in cls.password_list:
+            if password.account == account:
+                return password
+
+
 
 
 

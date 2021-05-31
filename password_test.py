@@ -17,6 +17,17 @@ class TestPassword(unittest.TestCase):
         self.new_passwords = Cridential("Gmail","Pinky","github55.pie")
         # behaviour for user class
         self.new_user = User("Testt","pass")
+        
+# Test one:Initialisation   
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_passwords.account,"Gmail")
+        self.assertEqual(self.new_passwords.username,"Pinky")
+        self.assertEqual(self.new_passwords.password,"github55.pie")
+
+    
 
 
 

@@ -35,6 +35,9 @@
 * Input: Type quit and follow the prompted questions
 * Output:Bye! program exit successfully
 
+### Notes
+* chmod +x run.py to gain access to use ./run.py
+
 ## Languages used
 * Python
 

@@ -112,6 +112,16 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(Cridential.display_all_passwords(),Cridential.password_list)
 
 
+# unittest for User
+# 1. Test initialization
+    def test_initialisation(self):
+        """
+        test_init test case to test if the object is initialized properly
+        """
+        self.assertEqual(self.new_user, "Testt")
+        self.assertEqual(self.new_user, "pass")
+
+
     
 
 

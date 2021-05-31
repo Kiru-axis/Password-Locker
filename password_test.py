@@ -90,6 +90,23 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(found_password.password, test_password.password)
 
 
+# 5. Confirm if account exists
+    def test_password_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the contact.
+        '''
+        self.new_passwords.save_password()
+        test_password = Cridential("Github","Venus","gitty")
+
+        test_password.save_password()
+        password_exists = Cridential.password_exists("Github")
+
+        self.assertTrue(password_exists)
+
+
+    
+
+
     
 
     

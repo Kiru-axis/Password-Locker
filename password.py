@@ -51,39 +51,6 @@ class Cridential:
         return cls.password_list
 
 
-    
-
-    
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # User class 
 class User:
     user_list = []
@@ -93,5 +60,14 @@ class User:
     def __init__(self,user,login_password):
         self.user = user
         self.login_password = login_password
+
+
+# Save user logins
+    def save_user(self):
+        """
+        saves user logins in the user_list List which acts as our database
+        """
+        # User.user_list.append(self)
+        User.user_list.append(self)
 
 

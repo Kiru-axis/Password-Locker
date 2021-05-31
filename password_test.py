@@ -118,8 +118,8 @@ class TestPassword(unittest.TestCase):
         """
         test_init test case to test if the object is initialized properly
         """
-        self.assertEqual(self.new_user, "Testt")
-        self.assertEqual(self.new_user, "pass")
+        self.assertEqual(self.new_user.user, "Testt")
+        self.assertEqual(self.new_user.login_password, "pass")
 
 
 # 2. Save user logins
@@ -130,23 +130,6 @@ class TestPassword(unittest.TestCase):
         """
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
-
-
-    
-
-
-    
-
-    
-
-    
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

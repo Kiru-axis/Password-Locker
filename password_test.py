@@ -77,6 +77,19 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(len(Cridential.password_list),1)
 
 
+#Test 4: Search Account and display passwords
+    def find_password_by_account(self):
+        '''
+        test to check if we can find password by account or username
+        '''
+        self.new_passwords.save_password()
+        test_password = Cridential("Github","Venus","gitty")
+        test_password.save_password()
+
+        found_password = Cridential.find_password_by_account("Github")
+        self.assertEqual(found_password.password, test_password.password)
+
+
     
 
     

@@ -52,6 +52,8 @@ class TestPassword(unittest.TestCase):
         test_password.save_password() #save
         self.assertEqual(len(Cridential.password_list),2)
 
+
+# The tearDown method will clean up all the test we make and only add real password
     def tearDown(self):
         '''
         tearDown method that does clean up after each test case has run.
@@ -60,6 +62,20 @@ class TestPassword(unittest.TestCase):
         Cridential.password_list = []
         # Teardown for user
         User.user_list = []
+
+# Test 3: Delete Account 
+
+    def test_delete_password(self):
+        '''
+        test_delete_password to test if we can remove an Account from our password list
+        '''
+        self.new_passwords.save_password()
+        test_password = Cridential("Facebook","Pluto","turtles") #Add these account to delete it and confirm our delete test
+
+        test_password.save_password()
+        self.new_passwords.delete_password() #removing from the list
+        self.assertEqual(len(Cridential.password_list),1)
+
 
     
 

@@ -17,7 +17,7 @@ class TestPassword(unittest.TestCase):
         self.new_passwords = Cridential("Gmail","Pinky","github55.pie")
         # behaviour for user class
         self.new_user = User("Testt","pass")
-        
+
 # Test one:Initialisation   
     def test_init(self):
         '''
@@ -26,6 +26,17 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_passwords.account,"Gmail")
         self.assertEqual(self.new_passwords.username,"Pinky")
         self.assertEqual(self.new_passwords.password,"github55.pie")
+
+
+# Test 2: Saving Accounts in the password.txt file    
+    def test_save_password(self):
+        '''
+        test_save_password test case to test if the Account object is saved into
+        the Cridential list
+        '''
+        self.new_passwords.save_password() #add new account
+
+        self.assertEqual(len(Cridential.password_list),1) #checking if the length of the list changes
 
     
 

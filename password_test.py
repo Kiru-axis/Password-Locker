@@ -104,6 +104,14 @@ class TestPassword(unittest.TestCase):
         self.assertTrue(password_exists)
 
 
+# 6. Display all contacts
+    def test_display_all_passwords(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
+        self.assertEqual(Cridential.display_all_passwords(),Cridential.password_list)
+
+
     
 
 

@@ -26,7 +26,7 @@ class Cridential:
         '''
         
         Cridential.password_list.remove(self)
-
+# 4 Search and display password
     @classmethod
     def find_by_account(cls, account):
         '''
@@ -35,6 +35,16 @@ class Cridential:
         for password in cls.password_list:
             if password.account == account:
                 return password
+# 5 if the account really exists
+    @classmethod
+    def password_exists(cls,account):
+        for password in cls.password_list:
+            if password.account == account:
+                return True
+        return False
+
+
+    
 
 
 

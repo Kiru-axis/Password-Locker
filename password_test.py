@@ -52,6 +52,17 @@ class TestPassword(unittest.TestCase):
         test_password.save_password() #save
         self.assertEqual(len(Cridential.password_list),2)
 
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        This helps us get accurate test results every time a new test case.
+        '''
+        Cridential.password_list = []
+        # Teardown for user
+        User.user_list = []
+
+    
+
     
 
     
